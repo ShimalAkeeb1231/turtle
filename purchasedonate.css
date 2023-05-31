@@ -1,0 +1,490 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+body{
+    background-color: white;
+    padding-top: 3.5%;
+
+}
+header{
+    width: 100%;
+}
+.nav{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(2, 33, 52);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+   
+}
+
+.logo {
+    color: rgb(91, 222, 222);
+    border-right: 3px solid white;
+    width: 15%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.nav-bar{
+    width: 70%;
+    display: inline;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 10px;
+}
+nav ul li a{
+    color: rgb(91, 222, 222);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: rgb(223, 232, 229);
+    transition: .3s;
+    border-bottom: 1px solid white;
+
+}
+
+
+.topimage{
+    background: url(images/top5.jpg);
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 55px;
+       
+}
+
+/* -------------------------main------------------------- */
+
+.donate-container {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    background-color: rgb(201 200 200 / 55%);
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+.donate{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 25px;
+    margin: auto;
+}
+
+.donate-top{
+display: flex;
+justify-content: space-between;
+}
+
+.donate-bottom{
+display: flex;
+justify-content: space-between;
+}
+
+.desied-donation{
+width: 80%;
+margin: auto;
+margin-top: 25px;
+
+
+}
+
+input{
+    width: 90%;
+}
+
+
+
+.fbottom{
+    display: inline;
+    height: 10px;
+}
+
+.txt-area{
+    height: 40px;
+
+
+}
+
+
+
+  
+  button {
+
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  /* ------------------------------merchandise--------------------- */
+
+  .card-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    background-color:  rgb(201 200 200 / 55%);
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .card img {
+    width: 90%;
+    height: 350px;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  .c-title {
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+  
+}
+  
+  .price {
+    font-size: 14px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  
+  .card:hover {
+    color: rgb(223, 232, 229);
+    transition: .3s;
+  }
+  
+  .card-container a {
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+  }
+
+  .purchase{
+    display: flex;
+    margin: auto;
+    padding: 15px 6px;
+  }
+
+
+
+
+/* ---------------------------footer---------------------- */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    color:rgb(180, 253, 253);
+    padding: 30px;
+    background-color: rgb(4, 34, 52);
+    justify-content: space-evenly;
+}
+
+
+footer a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(180, 253, 253);
+    margin-top: 35px;
+    padding-left: 0px;
+    
+}
+
+footer ul li{
+    list-style-type: none;
+    padding-top :15px; 
+    font-size: 10px;
+}
+
+.link{
+    width: 20%;
+    height: fit-content;
+    text-align: left;
+    border-right: 1px solid white;
+}
+.link p{
+    font-size: 20px;
+}
+
+.cright{
+    width: 30%;
+    height: fit-content;
+    display: grid;
+    text-align: center;
+    margin: auto;
+}
+
+
+.contact{
+    width: 30%;
+    justify-content: right;
+    padding-left: 10%;
+    border-left: 1px solid white;
+    
+}
+
+.contact p{
+    font-size: 20px;
+
+}
+.email{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.btn{
+    font-size: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 3%;
+    margin-top: 5px;
+}
+
+footer a:hover{
+    color: rgb(223, 232, 229);
+    transition: .3s;
+}
+
+
+@media only screen and (max-width:1000px){
+    body{
+        
+        padding-top: 19%; 
+   }
+   .logo{
+       display: grid;
+       align-items: center;
+       width: 100%;
+       height: 40px;
+       font-size: 10px;
+       padding-top: 0px;
+       text-align: center;
+       border-bottom: 2px solid white;
+       border-right: none;
+       float: none;
+   }
+   .nav{  
+       position: absolute;
+       font-size: 10px;  
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 0%;
+       padding: 0px;
+       
+   }
+
+   nav ul li{
+       padding: 5px 5px;
+   }
+   nav ul{
+       text-align: center;
+   }
+   .nav-bar{
+       width: 100%;
+       border-bottom: 0px solid white;
+   }
+
+   /*---------------------------- TOP img ----------------------*/
+
+   .topimage{
+       width: 100%;
+        height: 20vh; 
+       font-size: 25px;
+   
+   }
+
+    /* -----------------------main------------------------------ */
+
+    .donate-container {
+        width: 90%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+       
+    }
+
+    .card-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card{
+        width: 90%;
+        margin: auto;
+    }
+
+    .card img {
+        width: 90%;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        background-size: cover;
+    }
+
+    button{
+        font-size: 12px;
+        width: 30%;
+    
+    }
+
+    /* -----------------------------footer---------------------------- */
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        color: rgb(180, 253, 253);
+        padding: 10px;
+        background-color: rgb(4, 34, 52);
+        justify-content: space-evenly;
+    }
+
+    footer a{
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(180, 253, 253);
+        margin-top: 35px;
+        padding-left: 0px;
+        
+    }
+    
+    footer ul li{
+        list-style-type: none;
+        padding-top :10px; 
+    }
+    
+    .link{
+        width: 30%;
+        height: fit-content;
+        text-align: left;
+        border-right: 1px solid white;
+    }
+    .link p{
+        font-size: 20px;
+    }
+    
+    .cright{
+        width: 30%;
+        height: fit-content;
+        display: grid;
+        text-align: center;
+    }
+   
+    
+    .contact{
+        width: 30%;
+        justify-content: right;
+        padding-left: 5%;
+        border-left: 1px solid white;
+        
+    }
+
+    .contact p{
+        font-size: 20px;
+    }
+    .email{
+        width: 100%;
+        height: 25px;
+        border-radius: 10px;
+        padding-left: 10px;
+        font-size: 10px;
+    }
+    textarea{
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 10px;
+    }
+    .btn{
+        font-size: 20px;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 3%;
+        margin-top: 5px;
+    }
+    
+    footer a:hover{
+        color: rgb(223, 232, 229);
+        transition: .3s;
+    }
+
+    @media only screen and (min-width: 447px) and (max-width: 1024px) {
+        /* CSS styles for tablet screens */
+        
+        body{
+          padding-top: 6%;
+        }
+      }
+
+
+
+
+}

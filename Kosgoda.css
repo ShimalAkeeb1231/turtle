@@ -1,0 +1,496 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+body{
+    background-color: rgb(154 255 255);
+    padding-top: 3.5%;
+
+}
+header{
+    width: 100%;
+}
+.nav{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(2, 33, 52);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+   
+}
+
+.logo {
+    color: rgb(91, 222, 222);
+    border-right: 3px solid white;
+    width: 15%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.nav-bar{
+    width: 70%;
+    display: inline;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 10px;
+}
+nav ul li a{
+    color: rgb(91, 222, 222);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: rgb(223, 232, 229);
+    transition: .3s;
+    border-bottom: 1px solid white;
+
+}
+
+.topimage{
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8af0ff;
+    font-size: 55px;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* ---------------------------main----------------------- */
+ 
+
+
+
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    z-index: 5;
+   
+}
+
+.div-1{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    gap: 10px;
+    background-color: rgba(10, 80, 130, 0.363);
+    border: 5px solid#234687;
+    border-radius: 10px;
+
+}
+
+.intro-img{
+    width: 90%;
+    height: 400px;
+    display: flex;
+
+
+}
+.intro-img img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.intro-description{
+    width: 90%;
+    height: auto;
+}
+p.intro{
+    width: 100%;
+}
+.m-title{
+    font-size: 40px;
+}
+
+.div-2{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    align-items: center;
+    background-color: rgba(0, 255, 132, 0.178);
+    padding-bottom: 40px;
+    padding-top: 40px;
+    gap: 40px;
+    border: 5px solid#046c63c8;
+}
+.img-2{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.sub{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.sub-sub{
+    width: 47.5%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(240, 255, 255, 0.323);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+section.sec-2{
+    width: 90%;
+
+}
+
+h2.title{
+    width: auto;
+    text-align: center;
+    margin:auto;
+}
+p.sub-parah{
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    
+}
+
+
+section.sec-3{
+    width: 90%;
+}
+
+/* ---------------------------footer---------------------- */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    color:rgb(180, 253, 253);
+    padding: 30px;
+    background-color: rgb(4, 34, 52);
+    justify-content: space-evenly;
+}
+
+
+footer a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(180, 253, 253);
+    margin-top: 35px;
+    padding-left: 0px;
+    
+}
+
+footer ul li{
+    list-style-type: none;
+    padding-top :15px; 
+    font-size: 10px;
+}
+
+.link{
+    width: 20%;
+    height: fit-content;
+    text-align: left;
+    border-right: 1px solid white;
+}
+.link p{
+    font-size: 20px;
+}
+
+.cright{
+    width: 30%;
+    height: fit-content;
+    display: grid;
+    text-align: center;
+    margin: auto;
+}
+
+.contact{
+    width: 30%;
+    justify-content: right;
+    padding-left: 10%;
+    border-left: 1px solid white;
+    
+}
+
+.contact p{
+    font-size: 20px;
+
+}
+.email{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.btn{
+    font-size: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 3%;
+    margin-top: 5px;
+}
+
+footer a:hover{
+    color: rgb(223, 232, 229);
+    transition: .3s;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+@media only screen and (max-width:1000px){
+    body{
+        
+        padding-top: 19%; 
+   }
+   .logo{
+       display: grid;
+       align-items: center;
+       width: 100%;
+       height: 40px;
+       font-size: 10px;
+       padding-top: 0px;
+       text-align: center;
+       border-bottom: 2px solid white;
+       border-right: none;
+       float: none;
+   }
+   .nav{  
+       position: absolute;
+       font-size: 10px;  
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 0%;
+       padding: 0px;
+       
+   }
+
+   nav ul li{
+       padding: 5px 5px;
+   }
+   nav ul{
+       text-align: center;
+   }
+   .nav-bar{
+       width: 100%;
+       border-bottom: 0px solid white;
+   }
+
+    /*---------------------------- TOP img ----------------------*/
+
+    .topimage{
+        width: 100%;
+        height: 20vh; 
+        font-size: 20px;
+    
+    }
+
+    .video-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    /*-------------------------------------------- main body------------------------------------------ */
+
+
+
+    
+    .div-1{
+        width: 90%;
+    
+    }
+    
+    .intro-img{
+        height: 200px;
+    
+    
+    }
+    
+    .m-title{
+        font-size: 23px;
+    }
+    
+    .div-2{
+        flex-direction: column;
+        width: 90%;
+        border: 5px solid#046c63c8;
+    }
+
+    .img-2{
+        height: 200px;
+    }
+    
+   
+    
+    .sub{
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+    
+    .sub-sub{
+        width: 100%;
+    }
+    
+    section.sec-2{
+        width: 90%;
+    
+    }
+    
+    
+
+    /*----------------------- footer ------------------*/
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        color: rgb(180, 253, 253);
+        padding: 10px;
+        background-color: rgb(4, 34, 52);
+        justify-content: space-evenly;
+    }
+
+    footer a{
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(180, 253, 253);
+        margin-top: 35px;
+        padding-left: 0px;
+        
+    }
+    
+    footer ul li{
+        list-style-type: none;
+        padding-top :10px; 
+    }
+    
+    .link{
+        width: 30%;
+        height: fit-content;
+        text-align: left;
+        border-right: 1px solid white;
+    }
+    .link p{
+        font-size: 20px;
+    }
+    
+    .cright{
+        width: 30%;
+        height: fit-content;
+        display: grid;
+        text-align: center;
+    }
+  
+    
+    .contact{
+        width: 30%;
+        justify-content: right;
+        padding-left: 5%;
+        border-left: 1px solid white;
+        
+    }
+
+    .contact p{
+        font-size: 20px;
+    }
+    .email{
+        width: 100%;
+        height: 25px;
+        border-radius: 10px;
+        padding-left: 10px;
+        font-size: 10px;
+    }
+    textarea{
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 10px;
+    }
+    .btn{
+        font-size: 20px;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 3%;
+        margin-top: 5px;
+    }
+    
+    footer a:hover{
+        color: rgb(223, 232, 229);
+        transition: .3s;
+    }
+
+    @media only screen and (min-width: 447px) and (max-width: 1024px) {
+        /* CSS styles for tablet screens */
+      
+        body{
+          padding-top: 6.5%;
+        }
+      }
+
+
+}
