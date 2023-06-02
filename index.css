@@ -199,6 +199,10 @@ nav ul li a:hover{
     font-size: 25px;
 }
 
+.container a{
+    text-decoration: none;
+    color: white;
+}
 
 
 /* ---------------------------footer---------------------- */
