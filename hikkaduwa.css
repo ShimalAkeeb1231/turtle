@@ -108,6 +108,36 @@ nav ul li a:hover{
     font-size: 25px;
 }
 
+.button{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button a{
+    text-decoration:  none;
+}
+
+button[type="book-now"] {
+    
+    display: block;
+    text-align: center;
+    padding: 20px 20px;
+    background-color: rgb(2, 33, 52);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+button:hover{
+    color: rgb(91, 222, 222);
+    transition: .3s;
+    
+
+}
+
 .img-map{
     width: 50%;
     height: auto;

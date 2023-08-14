@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Page</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="ticket.css">
+
+</head>
+
+<body>
+
+
+<div x-data="tickets">
+
+
+        <header class="header">
+            <h1 class="header-text">BUY TICKETS </h1>
+        </header><br><br><br>
+        
+
+<div class="main"><br>
+    <div class="section-1"><br>
+        
+
+            <div class="date-picker">
+                <h2>Pick a date</h2><br>
+                <input type="date"  name="date" id="date" x-model="date" required ><br><br>
+            </div>
+
+        <h2>Ticket Charges</h2><br>
+        <table class="charges-table">
+        <tr>
+            <th>Category</th>
+            <th>Normal Hour (USD)</th>
+            <th>Peak Hour (USD)</th>
+        </tr>
+        <tr>
+            <td>Foreigner Adult</td>
+            <td>10</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Foreigner Child</td>
+            <td>5</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>SL Adult</td>
+            <td>4</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>SL Child</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="footer-row">Free for Infants under 4 years</td>
+        </tr>
+        </table><br>
+
+        <div x-show="date">
+        <h2 id="timeslot">Select Time Slots</h2><br>
+        <div>
+            <ul>
+                <template x-for="(timeSlot, index) in openTimes" :key="index">
+                    <li x-show="showTimes == selectedTimeSlots.includes(index)"
+                    x-bind:style="timeSlot.isPeak ? 'color: red' : 'color: green'"
+                        x-on:click="selectTimeSlot(index)">
+                        <p id="timeSlot.title" x-text="timeSlot.title" style="cursor: pointer;"></p>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        </div><br><br>
+    
+
+        
+   
+
+
+            <div x-show="selectedTimeSlots.length">
+                <h2 for="ticketType">Select Ticket Type</h2><br><br>
+                <div class="ticket-wrapper">
+                <template x-for="(ticketType, index) in ticketTypes" :key="index" style="display: flex;">
+                    <div class="ticket-section">
+                        <div class="ticket-name-type"><h3 x-bind:for="ticketType.name" x-text="ticketType.name"></h3></div>
+                        <div class="Guests-form">
+                            <button type="button"
+                                x-on:click="ticketTypes[index].count = (ticketTypes[index].count - 1 > 0 ? ticketTypes[index].count - 1 : 0); calculate(ticketTypes[index])">-</button>
+                            <input type="number" x-model="ticketTypes[index].count" />
+                            <button type="button"
+                                x-on:click="ticketTypes[index].count = ticketTypes[index].count + 1; calculate(ticketTypes[index])" >+</button>
+                        </div><br><br>
+                    </div><br><br>
+                </template><br><br>
+                </div><br>
+            </div>
+        
+
+        
+        <button class="purchase-button" x-on:click="gotoCheckout()" x-bind:disabled="!date || !ticketTypes">Continue</button>
+
+    </div><br><br>
+
+    <div class="section-2">
+
+        <h2>Purchase Summary</h2><br><br>
+        
+        
+        <div class="table-container">
+            <table>
+               <tr>
+                <th>Date:</th>
+                <td><div x-text="date"></div></td>
+              </tr>
+                <tr>
+                    <th>Time Slots:</th>
+                    <td>
+                        <template x-for="timeIndex in selectedTimeSlots">
+                            <div x-text="openTimes[timeIndex].title"></div>
+                        </template>
+                    </td>
+                </tr>
+                <tr>
+                <th>Sri Lankan Adult:</th>
+                    <td>$
+                        <span x-text=" ticketTypes[0].count"></span>
+                    </td>
+                <tr>
+                <th>Sri Lankan Child:</th>
+                    <td>$
+                        <span x-text=" ticketTypes[1].count"></span>
+                    </td>
+                <tr>
+                <th>Foreign Adult:</th>
+                    <td>$
+                        <span x-text=" ticketTypes[2].count"></span>
+                    </td>
+                </tr>
+                <tr>
+                <th>Foreign Child:</th>
+                    <td>$
+                        <span x-text=" ticketTypes[3].count"></span>
+                    </td>
+                </tr>
+                <tr>
+                <th>Infant:</th>
+                    <td>$
+                        <span x-text=" ticketTypes[4].count"></span>
+                    </td>
+                </tr>
+                <th>Total Payable:</th>
+                <td> $ <span x-text="calculateGrandTotal(ticketTypes)">
+                </span>
+                </td>
+                </tr>
+            </table><br><br>
+          </div>
+
+    </div>
+        
+        
+        
+    
+       
+
+
+
+</div>
+</div>
+
+    
+
+
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('tickets', () => ({
+                date: null,
+                ticketTypes: [
+                    {
+                        name: 'SL Adult',
+                        peak: 6,
+                        normal: 4,
+                        count: 0,
+                        total: 0
+                    },
+                    {
+                        name: 'SL Child',
+                        peak: 3,
+                        normal: 2,
+                        count: 0,
+                        total: 0
+                    },
+                    {
+                        name: 'Foreign Adult',
+                        peak: 13,
+                        normal: 10,
+                        count: 0,
+                        total: 0
+                    },
+                    {
+                        name: 'Foreign Child',
+                        peak: 8,
+                        normal: 5,
+                        count: 0,
+                        total: 0
+                    },
+                    {
+                        name: 'Infant',
+                        peak: 0,
+                        normal: 0,
+                        count: 0,
+                        total: 0
+                    },
+                ],
+                openTimes: [
+                    {
+                        title: '7AM - 8AM',
+                        isPeak: false
+                    },
+                    {
+                        title: '8AM - 9AM',
+                        isPeak: false
+                    },
+                    {
+                        title: '9AM - 10AM',
+                        isPeak: false
+                    },
+                    {
+                        title: '10AM - 11AM',
+                        isPeak: true
+                    },
+                    {
+                        title: '11AM - 12PM',
+                        isPeak: true
+                    },
+                    {
+                        title: '12PM - 1PM',
+                        isPeak: true
+                    },
+                    {
+                        title: '1PM - 2PM',
+                        isPeak: false
+                    },
+                    {
+                        title: '2PM - 3PM',
+                        isPeak: false
+                    },
+                    {
+                        title: '3PM - 4PM',
+                        isPeak: true
+                    },
+                    {
+                        title: '4PM - 5PM',
+                        isPeak: true
+                    },
+                    {
+                        title: '5PM - 6PM',
+                        isPeak: true
+                    },
+                ],
+
+                selectedTimeSlots: [],
+
+                showTimes: false,
+                //------- Functions -------
+
+                selectTimeSlot(index) {
+
+                        // check if the index is already in the array
+                        if (this.selectedTimeSlots.includes(index)) {
+
+                            // remove the index from the array
+                            this.selectedTimeSlots = this.selectedTimeSlots.filter(item => item !== index);
+
+                        } else {
+
+                            // Todo - you should be able to select time slots in the past !!!
+
+                            // get the last element of the array
+                            let lastElement = this.selectedTimeSlots[this.selectedTimeSlots.length - 1];
+
+                            // add 1 to the last element and check if the value is equals to the index
+                            if (!this.selectedTimeSlots.length || index - 1 == lastElement) {
+
+                                // add the index to the array
+                                this.selectedTimeSlots.push(index);
+
+                            } else {
+                                alert('You can only select consecutive time slots');
+                            }
+                        }
+
+                        // sort the array
+                        this.selectedTimeSlots = this.selectedTimeSlots.sort();
+
+
+                        console.log(this.selectedTimeSlots);
+                        },
+
+                calculate(ticketType) {
+
+                    let total = 0;
+
+                    this.selectedTimeSlots.forEach((timeSlotIndex) => {
+
+                        // calculate the total
+                        total += parseInt(ticketType.count * (this.openTimes[timeSlotIndex].isPeak ? ticketType.peak : ticketType.normal));
+                    });
+
+                    ticketType.total = total;
+                
+                },
+                calculateGrandTotal(ticketTypes) {
+                    grandtotal = 0;
+
+                    for (const ticketType of ticketTypes) {
+                        grandtotal += ticketType.total;
+                    }
+
+                    return grandtotal;
+
+                },
+                
+                gotoCheckout() {
+                    // store the data in the local storage
+                    localStorage.setItem('ticketTypes', JSON.stringify(this.ticketTypes));
+                    localStorage.setItem('savedTimeslots', JSON.stringify(this.selectedTimeSlots));
+                    localStorage.setItem('date', JSON.stringify(this.date));
+
+                    // redirect to the checkout page
+                    window.location.href = 'details.html';
+                }
+
+            }));
+        })
+    </script>
+
+
+
+</body>
+
+</html>

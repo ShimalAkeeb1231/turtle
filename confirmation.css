@@ -1,0 +1,63 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color:  rgb(2, 33, 52);
+    font-size: 15px;
+}
+
+/* Header styles */
+.header {
+    background-color: rgb(2, 33, 52);
+    color: rgb(91, 222, 222);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main container styles */
+.main {
+    width: 100%;
+
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.confirmation-table {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.confirmation-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.confirmation-table th,
+.confirmation-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.confirmation-table th {
+    text-align: left;
+    font-weight: bold;
+}

@@ -1,0 +1,184 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color:  rgb(2, 33, 52);
+    font-size: 15px;
+}
+
+/* Header styles */
+.header {
+    background-color: rgb(2, 33, 52);
+    color: rgb(91, 222, 222);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main container styles */
+.main {
+    width: 100%;
+
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrapper{
+    width: 50%;
+    height: auto;
+    
+}
+
+/* Details form styles */
+.details-form {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.details-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.details-form p {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    color: #888;
+}
+
+.details-form input{
+    width: 95%;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+}
+
+.details-form select {
+    width: 40%;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button[type='payment']{
+    width: auto;
+    padding: 10px;
+    background-color: rgb(2, 33, 52);
+    border-radius: 5px;
+    color: rgb(91, 222, 222);
+    cursor: pointer;
+}
+
+.iti{
+    width: 103%;
+}
+
+/* Summary table styles */
+.summary-customer-table{
+    width: 45%;
+}
+
+
+.summary-table {
+    width: auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.summary-table th {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Guest table styles */
+.table-customer {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.table-customer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-customer th,
+.table-customer td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.table-customer th {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Add more styles as needed */
+
+@media only screen and (max-width:1000px){
+
+    .body{
+        width: 100%;
+    }
+
+    .container{
+        width: 90%;
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .form-wrapper{
+        width: 100%;
+
+    }
+
+    .summary-customer-table{
+        width: 100%;
+    }
+
+
+
+}

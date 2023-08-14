@@ -1,0 +1,242 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color:  rgb(2, 33, 52);
+    font-size: 15px;
+
+
+}
+
+/* Header styles */
+.header {
+    background-color: rgb(2, 33, 52);
+    color: rgb(91, 222, 222);
+    text-align: center;
+    padding: 20px;
+    
+}
+
+/* Main container styles */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    
+}
+
+.section-1{
+    width: 45%;
+    height: fit-content;
+    margin:  auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-2{
+    width: 45%;
+    height: fit-content;
+    margin: auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Date picker styles */
+.date-picker {
+    width: 100%;
+    
+}
+
+.date-picker input[type="date"] {
+    width: 40%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Time slot styles */
+#timeslot {
+    margin-top: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 1px 1px 2px #ddd;
+    
+}
+
+/* Ticket type styles */
+.Guests-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribute items equally */
+}
+
+.Guests-form button,
+.Guests-form input[type="number"] {
+    width: 25%; /* Set a percentage width for buttons and number input */
+    height: 30px; /* Adjust the height for smaller buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem; /* Adjust font size for smaller buttons */
+}
+
+.Guests-form input[type="number"] {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 30%; /* Adjust width of the number input */
+
+}
+
+.ticket-wrapper{
+    width: 90%;
+    margin: auto;
+}
+
+.ticket-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* Purchase summary styles */
+table {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+}
+
+th, td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+th{
+    font-size: 15px;
+    font-style: bold;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+td{
+    font-size: 15px;
+    color: rgb(2, 33, 52);
+}
+
+.footer-row {
+    background-color:rgb(2, 33, 52);
+    font-weight: bold;
+    color: rgb(91, 222, 222);;
+}
+
+.ticket-name-type{
+    width: 45%;
+    /* margin: auto; */
+}
+
+/* Continue button styles */
+button[type="button"] {
+    width: 25%;
+    display: block;
+    /* margin: 1rem auto; */
+    text-align: center;
+    padding: 10px 10px;
+    padding-bottom: 25px;
+    background-color: rgb(2, 33, 52);
+    color: rgb(91, 222, 222);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+.purchase-button{
+    width: auto;
+    padding: 10px;
+    background-color: rgb(2, 33, 52);
+    border-radius: 5px;
+    color: rgb(91, 222, 222);
+    cursor: pointer;
+    
+}
+
+.purchase-button:hover{
+    color: white;
+}
+
+@media only screen and (max-width:1000px){
+
+    .body{
+        width: 100%;
+    }
+
+    .main{
+        width: 95%;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .section-1{
+        width: auto;
+        margin: 0%;
+    }
+
+    .section-2{
+        width: auto;
+        margin: 0%;
+    }
+
+    .Guests-form{
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .Guests-form button,
+    .Guests-form input[type="number"] {
+    width: 20%; /* Set a percentage width for buttons and number input */
+    height: 30px; /* Adjust the height for smaller buttons */
+    display: block;
+}
+
+
+}
